@@ -1,13 +1,11 @@
 # React Google News
-![screenshot](readme_react_google_news.jpg)
 
 ### A simple [React](https://reactjs.org/) front end application using the [Google News API](https://newsapi.org/).
 React Google News uses a lightweight Node Express back end to reroute API queries to a React front end. It displays trending articles in a responsive card grid format and allows the user to select from several popular news websites.
 
 ## Demo App
-You can see a demo version of this application deployed to Heroku here: https://react-google-news.herokuapp.com
+You can see a demo version of this application deployed to Heroku here: [https://react-google-news.herokuapp.com]
 
-## Application Info
 The project is configured with [Node Package Manager](https://www.npmjs.com/), [Webpack](https://webpack.js.org/), and [Babel](https://babeljs.io/).
 
 It uses [webpack-merge](https://www.npmjs.com/package/webpack-merge) to separate development and production builds, but keep a common, reusable configuration. It is also configured for hot reloads in the Express server, so Webpack will rebuild when changes are made.
