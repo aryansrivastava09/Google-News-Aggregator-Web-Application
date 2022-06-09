@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css?family=Lato|Raleway:700');
+
+// Selectively import Bootstrap elements
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins";
+@import "bootstrap/scss/utilities";
+
+// Layout & components
+@import "bootstrap/scss/root";
+@import "bootstrap/scss/reboot";
+@import "bootstrap/scss/type";
+@import "bootstrap/scss/images";
+@import "bootstrap/scss/containers";
+@import "bootstrap/scss/grid";
+// @import "bootstrap/scss/tables";
+// @import "bootstrap/scss/forms";
+// @import "bootstrap/scss/buttons";
+@import "bootstrap/scss/transitions";
+// @import "bootstrap/scss/dropdown";
+// @import "bootstrap/scss/button-group";
+@import "bootstrap/scss/nav";
+@import "bootstrap/scss/navbar";
+@import "bootstrap/scss/card";
+// @import "bootstrap/scss/accordion";
+// @import "bootstrap/scss/breadcrumb";
+// @import "bootstrap/scss/pagination";
+// @import "bootstrap/scss/badge";
+// @import "bootstrap/scss/alert";
+// @import "bootstrap/scss/progress";
+// @import "bootstrap/scss/list-group";
+// @import "bootstrap/scss/close";
+// @import "bootstrap/scss/toasts";
+// @import "bootstrap/scss/modal";
+// @import "bootstrap/scss/tooltip";
+// @import "bootstrap/scss/popover";
+// @import "bootstrap/scss/carousel";
+// @import "bootstrap/scss/spinners";
+// @import "bootstrap/scss/offcanvas";
+// @import "bootstrap/scss/placeholders";
+
+// Helpers
+@import "bootstrap/scss/helpers";
+
+// Utilities
+@import "bootstrap/scss/utilities/api";
+
+// Custom Sass styling
+$highlight-color: red;
+
+body {
+  font-family: 'Lato', sans-serif;
+  background: gray url('./images/background_01.jpg') no-repeat fixed left top;
+  background-size: cover;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+}
+
+a {
+  transition: color 0.1s linear;
+  -o-transition: color 0.1s linear;
+  -moz-transition: color 0.1s linear;
+  -webkit-transition: color 0.1s linear;
+}
+
+#container {
+  padding-top: 40px;
+}
+
+#sidebar {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  color: white;
+
+  @include media-breakpoint-down(md) {
+    margin-bottom: 20px;
+
+    ul.flex-column {
+      flex-direction: row !important;
+    }
+  }
+}
+
+.nav-item {
+  .nav-link {
+    color: white;
+
+    @include media-breakpoint-down(md) {
+      padding: .5rem 2rem .5rem 0;
+    }
+  }
+
+  .nav-link:hover {
+    color: $highlight-color;
+  }
+
+  .active {
+    color: $highlight-color;
+  }
+}
+
+.article-masonry-grid {
+  display: -webkit-box; /* Not needed if autoprefixing */
+  display: -ms-flexbox; /* Not needed if autoprefixing */
+  display: flex;
+  margin-left: -20px; /* gutter size offset */
+  width: auto;
+
+  @include media-breakpoint-up(xxl) {
+    margin-left: -30px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    margin-left: 0px;
+  }
+}
+
+.article-masonry-grid_column {
+  padding-left: 20px; /* gutter size */
+  background-clip: padding-box;
+
+  @include media-breakpoint-up(xxl) {
+    padding-left: 30px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    padding-left: 0px;
+  }
+}
+
+/* Style your items */
+// .article-masonry-grid_column > div { /* change div to reference your elements you put in <Masonry> */
+//   background: grey;
+//   margin-bottom: 30px;
+// }
+
+.article {
+  margin-bottom: 20px;
+  // border-color: black;
+  border: none;
+  border-radius: 0.75rem;
+
+  // box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  -webkit-box-shadow: 1px 1px 2px 1px rgba(0,0,0,0.16), 2px 2px 6px 2px rgba(0,0,0,0.16);
+  -moz-box-shadow: 1px 1px 2px 1px rgba(0,0,0,0.16), 2px 2px 6px 2px rgba(0,0,0,0.16);
+  box-shadow: 1px 1px 2px 1px rgba(0,0,0,0.16), 2px 2px 6px 2px rgba(0,0,0,0.16);
+
+  @include media-breakpoint-up(xxl) {
+    margin-bottom: 30px;
+  }
+
+  // @include media-breakpoint-down(sm) {
+  //   margin-bottom: 15px;
+  // }
+
+  img {
+    border-top-left-radius: 0.75rem;
+    border-top-right-radius: 0.75rem;
+  }
+
+  .card-body {
+    padding: 15px 20px 25px 20px;
+  }
+
+  .card-title {
+    font-size: 1.1rem;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    line-height: 1.3;
+  }
+
+  p {
+    font-size: .9rem;
+    line-height: 1.4;
+  }
+
+  a {
+    color: black;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: $highlight-color;
+  }
+}
+
+#footer {
+  p {
+    padding-top: 20px;
+    color: white;
+    font-size: .9rem;
+    line-height: 1.4;
+  }
+
+  a {
+    color: lightgray;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: $highlight-color;
+  }
+}
