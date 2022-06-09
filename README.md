@@ -4,7 +4,7 @@
 React Google News uses a lightweight Node Express back end to reroute API queries to a React front end. It displays trending articles in a responsive card grid format and allows the user to select from several popular news websites.
 
 ## Demo App
-You can see a demo version of this application deployed to Heroku here: [https://react-google-news.herokuapp.com]
+You can see a demo version of this application deployed to Heroku here: (https://aryan-news-aggregator.herokuapp.com/)
 
 The project is configured with [Node Package Manager](https://www.npmjs.com/), [Webpack](https://webpack.js.org/), and [Babel](https://babeljs.io/).
 
